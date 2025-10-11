@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- penting untuk responsif -->
+  <title>Halaman Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background: white;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 100%;          /* fleksibel */
+      max-width: 350px;     /* batas maksimal */
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    table {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    td {
+      padding: 10px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: hsl(138, 61%, 30%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #145a2c;
+    }
+
+    input[type="reset"]:hover {
+      background-color: #c0392b;
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+
+      .login-container {
+        padding: 20px;
+      }
+
+      td {
+        display: block;       /* ubah jadi blok agar lebih rapi di hp */
+        width: 100%;
+        text-align: left;
+        font-size: 13px;
+      }
+
+      td input {
+        margin-top: 5px;
+      }
+
+      input[type="submit"],
+      input[type="reset"] {
+        width: 100%;          /* tombol full di layar kecil */
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="proses_login.html" method="post">
+      <table>
+        <tr>
+          <td>Username:</td>
+          <td><input type="text" name="username" required></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <input type="submit" value="Login">
+            <input type="reset" value="Reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+    <p>Belum punya akun? <a href="register.html">Register di sini</a></p>
+  </div>
+</body>
+</html>

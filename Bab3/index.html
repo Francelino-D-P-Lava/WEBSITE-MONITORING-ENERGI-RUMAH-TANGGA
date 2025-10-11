@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitoring Energi Rumah Tangga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eaf8ec;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #145a2c;
+    }
+
+    button {
+      background-color: #1e7c3a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #145a2c;
+    }
+
+    /* Toast Style */
+    #toast {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #145a2c;
+      color: #fff;
+      text-align: center;
+      border-radius: 8px;
+      padding: 12px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+      font-size: 15px;
+      transition: opacity 0.5s, bottom 0.5s;
+      opacity: 0;
+    }
+
+    #toast.show {
+      visibility: visible;
+      opacity: 1;
+      bottom: 50px;
+    }
+  </style>
+</head>
+
+<body align="center">
+  <!-- DOM #3 akan mengubah teks di bawah ini -->
+  <h1 id="judul">Selamat Datang di Website Monitoring Energi Rumah Tangga</h1>
+
+  <img src="login.jpg" alt="Monitoring Energi" width="300"><br><br>
+
+  <!-- DOM #1 menambahkan teks ke dalam div ini -->
+  <div id="info"></div>
+
+  <!-- DOM #2 menampilkan waktu -->
+  <div id="waktu"></div>
+
+  <button id="ubahTampilan">Ubah Tampilan</button><br><br>
+
+  <a href="login.html">Login</a> | 
+  <a href="register.html">Register</a>
+
+  <!-- Tempat munculnya TOAST -->
+  <div id="toast"></div>
+
+  <!-- File JavaScript eksternal -->
+  <script src="js/java.js"></script>
+</body>
+</html>
